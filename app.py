@@ -87,6 +87,16 @@ def predict_image(image):
     return response
 
 # ✅ Mastitis Detection API
+@app.route("/")
+def home():
+    return jsonify({
+        "message": "Welcome to the Bot Responses Backend API!",
+        "endpoints": {
+            "POST /predict": "Upload an image for mastitis detection",
+            "POST /chat": "Send a message to the veterinary chatbot"
+        }
+    })
+
 @app.route("/predict", methods=["POST"])
 def predict():
     if "file" not in request.files:
@@ -141,4 +151,4 @@ def chat():
 # 🔹 Run Flask App
 # ==========================
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    app.run(host="0.0.0.0", port=8080)  # Ensure port 8080
