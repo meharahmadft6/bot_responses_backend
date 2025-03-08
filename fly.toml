@@ -1,4 +1,4 @@
-app = "BOT_RESPONSES_BACKEND"
+app = "talkzilla"
 
 [build]
 image = "python:3.12"
