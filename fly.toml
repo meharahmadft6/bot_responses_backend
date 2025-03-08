@@ -1,16 +1,16 @@
-app = "talkzilla"
+app = "bot-responses-backend"
 
 [build]
 image = "python:3.12"
 
 [env]
-PORT = "8080"
+PORT = "5000"
 
 [deploy]
 strategy = "rolling"
 
 [http_service]
-internal_port = 8080
+internal_port = 5000
 force_https = true
 auto_stop_machines = true
 auto_start_machines = true
